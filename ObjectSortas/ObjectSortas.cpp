@@ -38,5 +38,6 @@ int main()
     Travesz t(graf);
 
 
+
     return 0;
 }

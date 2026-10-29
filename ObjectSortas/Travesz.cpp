@@ -35,7 +35,25 @@ void Travesz::dfsLauncher(int start)
 
 void Travesz::bfs(int start)
 {
-
+	queue<int> q;
+	q.push(start);
+	vis[start] = true;
+	
+	while (!q.empty())
+	{
+		int curr = q.front();
+		q.pop();
+		cout << curr << " ";
+			
+		for (auto i : v[curr])
+		{
+			if (!vis[i.first])
+			{
+				vis[i.first] = true;
+				q.push(i.first);
+			}
+		}
+	}
 }
 
 void Travesz::dickstra(int start)
